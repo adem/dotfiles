@@ -1,1 +1,3 @@
 gpu-context=wayland
+no-terminal
+ytdl-format=bestvideo[height<=1080]+bestaudio/best
