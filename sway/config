@@ -248,3 +248,8 @@ bar {
 
 include /etc/sway/config.d/*
 exec python $HOME/dotfiles/scripts/inactive-windows-transparency.py
+focus_follows_mouse no
+default_border none
+gaps outer 0
+gaps inner 0
+font pango:monospace 8
