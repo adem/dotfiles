@@ -20,6 +20,9 @@ set $term termite
 set $menu exec termite --name=launcher -e "bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'"
 for_window [app_id="^launcher$"] floating enable, border none
 
+# Your screenshot tool
+set $screenshot slurp | grim -g - $HOME/screenshots/$(date --iso-8601=s).png
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -89,6 +92,9 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 
     # start your launcher
     bindsym $mod+d exec $menu
+
+    # make a screenshot
+    bindsym $mod+Shift+r exec $screenshot
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -178,6 +184,11 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 
     # move focus to the parent container
     bindsym $mod+a focus parent
+
+    # Utility keys
+    bindsym XF86MonBrightnessUp exec light -A 10
+    bindsym XF86MonBrightnessDown exec light -U 10
+
 #
 # Scratchpad:
 #
