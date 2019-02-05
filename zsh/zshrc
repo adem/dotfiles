@@ -1,0 +1,15 @@
+PROMPT="%U%n@%M:%~%u $ "
+
+bindkey -v
+zstyle :compinstall filename '/home/adem/.zshrc'
+autoload -Uz compinit
+compinit
+
+alias ll="ls -la --color"
+alias vim="nvim-gtk"
+
+# auto-start sway when in tty1
+if [ "$(tty)" = "/dev/tty1" ]; then
+    sway
+    exit 0
+fi
