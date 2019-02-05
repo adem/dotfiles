@@ -235,13 +235,16 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+    status_command i3status
 
     colors {
         statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
+        background #000000aa
+        inactive_workspace #000000aa #000000aa #ffffff
+        focused_workspace #ffffff #000000aa #ffffff
+        separator #000000
     }
 }
 
 include /etc/sway/config.d/*
+exec python $HOME/dotfiles/scripts/inactive-windows-transparency.py
