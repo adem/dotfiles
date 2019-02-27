@@ -1,0 +1,41 @@
+call plug#begin('~/.vim/plugged')
+Plug 'itchyny/lightline.vim'
+Plug 'fatih/vim-go'
+Plug 'alvan/vim-closetag'
+Plug 'tpope/vim-surround'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/seoul256.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'leafgarland/typescript-vim'
+Plug '/usr/bin/fzf'
+Plug 'junegunn/fzf.vim'
+call plug#end()
+
+set tabstop=4
+set shiftwidth=4
+set smartindent
+set expandtab
+set laststatus=2
+
+set ttimeoutlen=100
+
+set relativenumber number
+
+autocmd FileType go nnoremap <buffer> <F8> : w <bar> !go run % <CR>
+
+set colorcolumn=80
+set scrolloff=5
+
+colorscheme seoul256
+set background=dark
+syntax on
+let g:go_fmt_command = "goimports"
+
+if exists('g:GtkGuiLoaded')
+  let g:GuiInternalClipboard = 1
+  call rpcnotify(1, 'Gui', 'Font', 'Iosevka 10')
+  call rpcnotify(1, 'Gui', 'Option', 'Popupmenu', 0)
+endif
+
+map <leader>f :Files<CR>
