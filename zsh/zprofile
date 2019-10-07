@@ -1,8 +1,14 @@
+# App-specific styling
 export NVIM_GTK_NO_HEADERBAR=1
 export NVIM_GTK_PREFER_DARK_THEME=1
 export NVIM_GTK_NO_WINDOW_DECORATION=1
+
+# Enable Wayland
 export QT_QPA_PLATFORM=wayland-egl
 export QUTE_SKIP_WAYLAND_CHECK=1
+export MOZ_ENABLE_WAYLAND=1
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 
 export GOPATH=$HOME/go
+
+alias ff=firefox-developer-edition

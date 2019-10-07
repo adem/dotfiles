@@ -1,42 +1,53 @@
 [options]
-font = monospace 12
+font = monospace 9
 scrollback_lines = 10000
 
 [colors]
-# special
-foreground      = #4f5b66
-foreground_bold = #4f5b66
-cursor          = #4f5b66
-background      = #eff1f5
+# Base16 Default Dark
+# Author: Chris Kempson (http://chriskempson.com)
 
-# black
-color0  = #2b303b
-color8  = #65737e
+foreground          = #d8d8d8
+foreground_bold     = #e8e8e8
+cursor              = #e8e8e8
+cursor_foreground   = #181818
+background          = rgba(24, 24, 24)
 
-# red
-color1  = #bf616a
-color9  = #bf616a
+# 16 color space
 
-# green
-color2  = #a3be8c
-color10 = #a3be8c
+# Black, Gray, Silver, White
+color0  = #181818
+color8  = #585858
+color7  = #d8d8d8
+color15 = #f8f8f8
 
-# yellow
-color3  = #ebcb8b
-color11 = #ebcb8b
+# Red
+color1  = #ab4642
+color9  = #ab4642
 
-# blue
-color4  = #8fa1b3
-color12 = #8fa1b3
+# Green
+color2  = #a1b56c
+color10 = #a1b56c
 
-# magenta
-color5  = #b48ead
-color13 = #b48ead
+# Yellow
+color3  = #f7ca88
+color11 = #f7ca88
 
-# cyan
-color6  = #96b5b4
-color14 = #96b5b4
+# Blue
+color4  = #7cafc2
+color12 = #7cafc2
 
-# white
-color7  = #c0c5ce
-color15 = #eff1f5
+# Purple
+color5  = #ba8baf
+color13 = #ba8baf
+
+# Teal
+color6  = #86c1b9
+color14 = #86c1b9
+
+# Extra colors
+color16 = #dc9656
+color17 = #a16946
+color18 = #282828
+color19 = #383838
+color20 = #b8b8b8
+color21 = #e8e8e8
