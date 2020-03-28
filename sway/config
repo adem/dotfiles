@@ -21,7 +21,9 @@ set $menu exec termite --name=launcher -e "bash -c 'compgen -c | sort -u | fzf |
 for_window [app_id="^launcher$"] floating enable, border none
 
 # Your screenshot tool
-set $screenshot slurp | grim -g - $HOME/screenshots/$(date --iso-8601=s).png
+set $screenshot slurp | grim -g - - | wl-copy
+
+set $redshift redshift -l 48.0099412:7.8540227
 
 ### Output configuration
 #
@@ -244,3 +246,4 @@ default_border none
 gaps outer 0
 gaps inner 2
 font pango:monospace 8
+exec $redshift

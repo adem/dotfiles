@@ -1,4 +1,4 @@
-PROMPT="%U%n@%M:%~%u $ "
+PROMPT="%n@%M:%~ $ "
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
