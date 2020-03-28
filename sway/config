@@ -35,8 +35,8 @@ output * bg #4495d4 solid_color
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output eDP-1 scale 2
-output eDP-1 pos 0 0 res 2560x1440
+output eDP-1 pos 0 0 res 2560x1440 scale 1
+output HDMI-A-1 pos 0 0 res 1920x1080@60Hz
 
 ### Idle configuration
 #
@@ -72,13 +72,18 @@ input type:keyboard {
     repeat_rate 20
 }
 
-input "6127:24632:ThinkPad_Bluetooth_Laser_Mouse_Mouse" {
+input type:pointer {
     pointer_accel -1
     left_handed 1
 }
 
 input "2:7:SynPS/2_Synaptics_TouchPad" {
     tap enabled
+}
+
+input "2:10:TPPS/2_IBM_TrackPoint" {
+    tap enabled
+    pointer_accel 0
 }
 
 ### Key bindings
@@ -232,8 +237,12 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
-
+    position bottom
+    height 40px
+    colors {
+        background #000000aa
+        separator #000000aa
+    }
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
     status_command i3status
@@ -242,8 +251,10 @@ bar {
 include /etc/sway/config.d/*
 # exec python $HOME/dotfiles/scripts/inactive-windows-transparency.py
 focus_follows_mouse no
-default_border none
+default_border pixel 4
 gaps outer 0
-gaps inner 2
-font pango:monospace 8
+gaps inner 4
+font pango:monospace 20
+exec mako
+exec udiskie
 exec $redshift
