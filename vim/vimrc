@@ -39,3 +39,11 @@ if exists('g:GtkGuiLoaded')
 endif
 
 map <leader>f :Files<CR>
+
+" Auto-expand braces/parens
+inoremap (; (<CR>);<C-c>O
+inoremap (, (<CR>),<C-c>O
+inoremap {; {<CR>};<C-c>O
+inoremap {, {<CR>},<C-c>O
+inoremap [; [<CR>];<C-c>O
+inoremap [, [<CR>],<C-c>O
