@@ -7,7 +7,7 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Mod4
+set $mod Mod1
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -19,9 +19,10 @@ set $term termite
 # Note: it's recommended that you pass the final command to sway
 set $menu exec termite --name=launcher -e "bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'"
 for_window [app_id="^launcher$"] floating enable, border none
+for_window [app_id="zoom"] floating enable, border none
 
 # Your screenshot tool
-set $screenshot slurp | grim -g - - | wl-copy
+set $screenshot slurp | grim -c -g - - | wl-copy
 
 set $redshift redshift -l 48.0099412:7.8540227
 
@@ -255,6 +256,7 @@ default_border pixel 4
 gaps outer 0
 gaps inner 4
 font pango:monospace 20
+client.focused #4c7899	#285577	#ffffff	#2e9ef4	#F7514D
 exec mako
 exec udiskie
 exec $redshift
