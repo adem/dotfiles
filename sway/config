@@ -14,11 +14,12 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term termite
+set $term foot
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
-set $menu exec termite --name=launcher -e "bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'"
-for_window [app_id="^launcher$"] floating enable, border none
+set $menu exec $term --title="launcher" bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
+set $windowswitcher exec sh $HOME/repos/dotfiles/scripts/rofi-window-switcher.sh
+for_window [title="^launcher$"] floating enable, border none
 for_window [app_id="zoom"] floating enable, border none
 
 # Your screenshot tool
@@ -29,15 +30,20 @@ set $redshift redshift -l 48.0099412:7.8540227
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg #4495d4 solid_color
+output * bg $HOME/sync/files/wallpapers/rjhl9vx4noc41.png fill
 #
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output eDP-1 pos 0 0 res 2560x1440 scale 1
-output HDMI-A-1 pos 0 0 res 1920x1080@60Hz
+output DP-2 pos 1920 0 res 3440x1440@60Hz scale 1
+# output DP-2 pos 1920 0 res 1920x1080@60Hz scale 1
+# output DP-2 disable
+output DP-1 pos 0 0 res 1920x1080@144Hz scale 1
+# output DP-1 disable
+output HDMI-A-1 disable
+# output HDMI-A-1 pos 5360 0 res 3840x2160@60Hz scale 2
 
 ### Idle configuration
 #
@@ -99,6 +105,9 @@ input "2:10:TPPS/2_IBM_TrackPoint" {
 
     # start your launcher
     bindsym $mod+d exec $menu
+
+    # start window switcher
+    bindsym $mod+Tab exec $windowswitcher
 
     # make a screenshot
     bindsym $mod+Shift+r exec $screenshot
@@ -249,14 +258,11 @@ bar {
     status_command i3status
 }
 
-include /etc/sway/config.d/*
-# exec python $HOME/dotfiles/scripts/inactive-windows-transparency.py
-focus_follows_mouse no
+gaps inner 8
 default_border pixel 4
-gaps outer 0
-gaps inner 4
-font pango:monospace 20
-client.focused #4c7899	#285577	#ffffff	#2e9ef4	#F7514D
+
+include /etc/sway/config.d/*
+font pango:monospace 13
+# exec python $HOME/repos/dotfiles/scripts/inactive-windows-transparency.py
 exec mako
 exec udiskie
-exec $redshift
