@@ -24,6 +24,9 @@ set relativenumber number
 
 autocmd FileType go nnoremap <buffer> <F8> : w <bar> !go run % <CR>
 
+" Autorun command on save
+autocmd BufWritePost *.tex silent :! pdflatex %
+
 set colorcolumn=80
 set scrolloff=5
 
