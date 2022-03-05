@@ -1,3 +1,1 @@
-gpu-context=wayland
-no-terminal
-ytdl-format=bestvideo[height<=1440]+bestaudio/best
+screenshot-format=png
