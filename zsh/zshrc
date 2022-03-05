@@ -9,6 +9,7 @@ autoload -Uz compinit
 compinit
 
 alias ll="ls -la --color"
+alias vim=nvim
 
 # auto-start sway when in tty1
 if [ "$(tty)" = "/dev/tty1" ]; then
