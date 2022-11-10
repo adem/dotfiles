@@ -262,8 +262,8 @@ bar {
     status_command i3status
 }
 
-gaps inner 8
-default_border pixel 4
+gaps inner 0
+default_border normal 2
 
 include /etc/sway/config.d/*
 font pango:monospace 13
