@@ -3,3 +3,10 @@
 	email = mail@adem.dev
 [init]
 	defaultBranch = main
+[merge]
+	ff = no
+	commit = yes
+[pull]
+	rebase = true
+[commit]
+	gpgsign = true
