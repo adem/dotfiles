@@ -18,7 +18,7 @@ set $term kitty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
 set $menu exec $term --title="launcher" bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
-set $windowswitcher exec sh $HOME/repos/dotfiles/scripts/rofi-window-switcher.sh
+set $windowswitcher exec sh $HOME/source/dotfiles/scripts/rofi-window-switcher.sh
 for_window [title="^launcher$"] floating enable, border none
 for_window [app_id="zoom"] floating enable, border none
 
