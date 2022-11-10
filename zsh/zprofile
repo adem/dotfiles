@@ -19,3 +19,8 @@ export PATH=$PATH:$HOME/.local/bin:$HOME/go/bin
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 export _JAVA_OPTIONS='-Djdk.gtk.version=2'
+
+# IME
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
