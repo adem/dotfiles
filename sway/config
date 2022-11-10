@@ -30,7 +30,7 @@ set $redshift redshift -l 48.0099412:7.8540227
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg $HOME/sync/files/wallpapers/rjhl9vx4noc41.png fill
+output * bg $HOME/sync/files/wallpapers/wp.png fill
 #
 # Example configuration:
 #
