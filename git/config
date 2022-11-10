@@ -1,6 +1,7 @@
 [user]
 	name = Adem Aydin
 	email = mail@adem.dev
+	signingkey = 5C0125ED93A6C45E
 [init]
 	defaultBranch = main
 [merge]
