@@ -270,3 +270,4 @@ font pango:monospace 13
 # exec python $HOME/repos/dotfiles/scripts/inactive-windows-transparency.py
 exec mako
 exec udiskie
+exec --no-startup-id fcitx5 -d
