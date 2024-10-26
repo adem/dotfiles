@@ -1,0 +1,7 @@
+[[language]]
+name = "json"
+
+[[language]]
+name = "python"
+indent = { tab-width = 4, unit = "    " }
+rulers = [80]
