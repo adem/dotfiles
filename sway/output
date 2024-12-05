@@ -1,0 +1,2 @@
+output * bg $HOME/sync/files/wallpapers/wp.png fill
+# output HDMI-A-1 pos 0 0 res 3840x2160@120Hz scale 2

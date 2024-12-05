@@ -1,0 +1,11 @@
+input type:keyboard {
+    xkb_options caps:escape,grp:ctr_space_toggle
+    xkb_layout us,de
+    repeat_delay 150
+    repeat_rate 60
+}
+
+input type:pointer {
+    pointer_accel -1
+    left_handed 0
+}

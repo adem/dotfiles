@@ -1,0 +1,9 @@
+bar {
+    colors {
+        background #000000aa
+        separator #000000aa
+    }
+    height 28px
+    position bottom
+    status_command i3status
+}
