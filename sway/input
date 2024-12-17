@@ -1,5 +1,5 @@
 input type:keyboard {
-    xkb_options caps:escape,grp:ctr_space_toggle
+    xkb_options caps:escape,grp:ctrl_space_toggle
     xkb_layout us,de
     repeat_delay 150
     repeat_rate 60
