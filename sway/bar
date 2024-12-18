@@ -5,5 +5,5 @@ bar {
     }
     height 28px
     position bottom
-    status_command i3status
+    status_command $HOME/source/dotfiles/scripts/run-status-command
 }

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+while true; do
+    kbd_layout=`swaymsg -t get_inputs | jq -r 'map(select(.type == "keyboard"))[0].xkb_active_layout_name'`
+    date=$(date +%d-%m-%Y" "%H:%M:%S)
+    echo "$kbd_layout | $date"
+    sleep 1
+done
