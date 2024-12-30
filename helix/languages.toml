@@ -1,7 +1,12 @@
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
 [[language]]
 name = "json"
 
 [[language]]
 name = "python"
-indent = { tab-width = 4, unit = "    " }
-rulers = [80]
+auto-format = true
+language-servers = ["ruff", "pylsp"]
+rulers = [88]
