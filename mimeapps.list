@@ -1,0 +1,6 @@
+[Default Applications]
+application/pdf=org.pwmt.zathura.desktop
+image/png=imv.desktop
+image/jpeg=imv.desktop
+image/gif=imv.desktop
+image/webp=imv.desktop
