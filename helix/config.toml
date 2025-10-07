@@ -8,3 +8,7 @@ enable = true
 
 [editor.indent-guides]
 render = true
+
+[keys.normal]
+Cmd-f = ":format"
+Cmd-r = ":reload-all"
